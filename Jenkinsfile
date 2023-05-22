@@ -11,10 +11,10 @@ pipeline {
         stage('commit and push') {
             steps {
                 mkdir('Git') {
-                cp.. git branch: 'main', url: 'https://github.com/gminezes/Jenkins-Repo.git'
+                cp ..git branch: 'main', url: 'https://github.com/gminezes/git-demo.git'
                     git add 'Glen2'
                     git commit -m "Added new file"
-                    git push
+                    git push git branch: 'main', url: 'https://github.com/gminezes/Jenkins-Repo.git'
                 '''
            }
         }

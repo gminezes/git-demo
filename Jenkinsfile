@@ -12,9 +12,9 @@ pipeline {
         steps {
            dir('repo2') {
                 cp ../var/jenkins_home/workspace/Jenkins-Github .
-                    git add Glen2
+                    git add 'Glen2'
                     git commit -m "Added new file"
-                    git push 'branch: 'main', url: 'https://github.com/gminezes/Jenkins-Repo.git'
+                    git push 'branch: 'main', url: "https://github.com/gminezes/Jenkins-Repo.git"
            }
         }
     }

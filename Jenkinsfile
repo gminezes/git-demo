@@ -17,7 +17,7 @@ pipeline {
                  * appropriate git commands
                  **/
                 bat '''
-                    cp ../E:\Repositary\Jenkins-Test\git-demo/Glen2 .
+                    cp ../https://github.com/gminezes/git-demo/blob/main/Glen2.txt .
                     git add Glen2
                     git commit -m "Added new file"
                     git push git branch: 'main', url: 'https://github.com/gminezes/Jenkins-Repo.git'

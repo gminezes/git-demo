@@ -10,8 +10,9 @@ pipeline {
         }
         stage('commit and push') {
             steps {
-                mkdir('Git') {
-                cp ..'/var/jenkins_home/workspace/Jenkins-Github/Glen2
+                git branch: 'main', credentialsId: 'glen-jenkins', url: 'https://github.com/gminezes/Jenkins-Repo.git'
+                mkdir 'Git' {
+                cp ../Jenkins-Repo/jenkins_home/workspace/Jenkins-Github/Glen2
                     git add 'Glen2'
                     git commit -m "Added new file"
                     git push
